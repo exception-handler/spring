@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<context:annotation-config></context:annotation-config>
+	
+	
+	<bean id="car" class="p1.Car"></bean>
+	<bean id="driver" class="p1.Driver"></bean>
+	<bean id="carRentalService" class="p1.CarRentalService" autowire="byName"/>
+		
+		<bean id="billing" class="p2.Billing"></bean>
+	
+	<bean id="car2" class="p1.Car">
+		<property name="carName" value="Wagon-R"/>
+		<property name="carNumber" value="DL-1233"/>
+	</bean>
+	
+	
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

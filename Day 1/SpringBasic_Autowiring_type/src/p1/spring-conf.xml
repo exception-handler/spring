@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="p1.Car" id="myCar" autowire="byType">
+		<constructor-arg name="carName" value="BMW" type="String"></constructor-arg>
+		<constructor-arg name="color" value="Black" type="String"></constructor-arg>
+		<property name="tyers">
+			<list>
+				<ref bean="t1"/>
+				<ref bean="t2"/>
+				<ref bean="t3"/>
+				<ref bean="t4"/>
+			</list>
+		</property>
+		
+	</bean>
+
+
+	<bean id="sony" class="p1.MusicSystem">
+		<constructor-arg name="companyName" value="sony"/>
+	</bean>
+
+	<bean id="sony2" class="p1.MusicSystem">
+		<constructor-arg name="companyName" value="sony"/>
+	</bean>
+
+
+
+	<bean class="p1.Engine" id="xyz">
+		<property name="power" value="2000"></property>
+	</bean>
+
+	<bean class="p1.Tyer" id="t1">
+		<constructor-arg name="companyName" value="ABC"/>
+		<constructor-arg name="size" value="10"/>
+	</bean>
+	<bean class="p1.Tyer" id="t2">
+		<constructor-arg name="companyName" value="ABC"/>
+		<constructor-arg name="size" value="10"/>
+	</bean>
+	<bean class="p1.Tyer" id="t3">
+		<constructor-arg name="companyName" value="ABC"/>
+		<constructor-arg name="size" value="10"/>
+	</bean>
+	<bean class="p1.Tyer" id="t4">
+		<constructor-arg name="companyName" value="ABC"/>
+		<constructor-arg name="size" value="10"/>
+	</bean>
+	
+
+
+</beans>
