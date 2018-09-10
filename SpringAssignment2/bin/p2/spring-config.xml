@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+<context:annotation-config></context:annotation-config>
+<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+
+<bean id="club" class="p2.Club">
+<property name="cId" value="101"></property>
+<property name="name" value="Yashwant Club"></property>
+<property name="owner" value="Rajeev"></property>
+</bean>
+<bean id="player" class="p2.Player" autowire="byName">
+<property name="pId" value="101"></property>
+<property name="name" value="rohit"></property>
+<property name="pay" value="50000"></property>
+</bean>
+
+<bean id="player1" class="p2.Player" autowire="byName">
+<property name="pId" value="102"></property>
+<property name="name" value="neeraj"></property>
+<property name="pay" value="10000"></property>
+</bean>
+
+
+
+</beans>

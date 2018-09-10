@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	
+	<bean class="Q3.Employee" id="emp1" >
+	<property name="id" value="102"></property>
+	<property name="name" value="Mohit"></property>
+	<property name="dept" ref="dept1"/>
+	</bean>
+   <bean class="Q3.Department" id="dept1">
+		<property name="deptName" value="HR"></property>
+		<property name="deptLoc" value="Noida"></property>
+	</bean>
+	
+	
+	<bean class="Q3.Employee" id="emp2" >
+	<constructor-arg name="id" value="102"></constructor-arg>
+	<constructor-arg name="name" value="Mohit"></constructor-arg>
+	<constructor-arg name="dept" ref="dept2"></constructor-arg>
+	</bean>
+	<bean class="Q3.Department" id="dept2">
+		<constructor-arg name="deptName" value="IT"></constructor-arg>
+		<constructor-arg name="deptLoc" value="Mumbai"></constructor-arg>
+	</bean>
+</beans>
